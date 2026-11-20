@@ -1,0 +1,20 @@
+# Market Data Ingestion
+yfinance>=0.2.28
+
+# Data Wrangling & Math
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Database Connectivity (PostgreSQL)
+psycopg2-binary>=2.9.0
+
+# Machine Learning (For LSTM model)
+torch>=2.1.0
+
+# Visualization & Config
+matplotlib>=3.7.0
+plotly>=5.15.0
+pyyaml>=6.0.1
+
+# The Glue between Python & C++
+pybind11>=2.11.0

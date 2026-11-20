@@ -1,0 +1,22 @@
+[project]
+name = "stock-pipeline"
+version = "0.1.0"
+description = "Quantitative stock data pipeline with real-time indicators and C++ Monte Carlo simulation"
+authors = [
+    {name = "Tanay", email = "tanay@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "yfinance>=0.2.28",
+    "pyyaml>=6.0.1",
+    "psycopg2-binary>=2.9.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "pybind11>=2.11.0",
+    "matplotlib>=3.7.0"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

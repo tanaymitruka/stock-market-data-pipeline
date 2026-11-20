@@ -1,0 +1,35 @@
+# Stock Pipeline Configuration
+
+# Target assets to track in the pipeline
+market_data:
+  tickers:
+    - "AAPL"
+    - "MSFT"
+    - "TSLA"
+    - "NVDA"
+    - "SPY"
+    - "GOOGL"
+    - "AMZN"
+    - "NFLX"
+    - "AMD"
+  update_interval_seconds: 1  # Simulated high-frequency tick rate
+
+# Algorithmic Data Validation Layer
+validation:
+  max_price_variance_percent: 10.0  # Flag/drop ticks deviating by > 10%
+  allow_missing_volume: false       # Strict missing field check
+
+# PostgreSQL Database Configuration
+database:
+  host: "localhost"
+  port: 5432
+  database: "stock_db"
+  user: "postgres"
+  password: ""  # Leave blank to load securely from DB_PASSWORD environment variable or .env
+  pool_min_connections: 1
+  pool_max_connections: 10
+
+# C++ Monte Carlo Engine Settings
+simulation:
+  num_paths: 100000                 # Heavy multi-threaded path count
+  time_steps: 252                   # Trading days in a year
