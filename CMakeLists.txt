@@ -21,3 +21,8 @@ pybind11_add_module(simulation_engine
 # 4. Enable multi-threading support (required for parallel Monte Carlo)
 find_package(Threads REQUIRED)
 target_link_libraries(simulation_engine PRIVATE Threads::Threads)
+
+# Output compiled library directly to project root for simple 'import simulation_engine'
+set_target_properties(simulation_engine PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+)

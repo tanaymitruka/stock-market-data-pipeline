@@ -20,3 +20,6 @@ build/
 
 # Environment & Secrets
 .env
+
+# Editor settings
+.vscode/
